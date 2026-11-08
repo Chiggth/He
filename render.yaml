@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: my-website
+    env: static
+    buildCommand: echo "Static site - no build step required"
+    staticPublishPath: .
+    routes:
+      - src: /(.*)
+        dest: /index.html
